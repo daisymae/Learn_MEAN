@@ -1,0 +1,14 @@
+<article class="panel panel-default">
+  <div class="panel-body">
+    {{ aMessage.content }}
+  </div>
+  <footer class="panel-footer">
+    <div class="author"> <!-- custom class will create -->
+      {{ aMessage.username }}
+    </div>
+    <div class="config" *ngIf="belongsToUser()"> <!-- will create this custom class -->
+      <a (click)="onEdit()">Edit</a>
+      <a (click)="onDelete()">Delete</a>
+    </div>
+  </footer>
+</article>
